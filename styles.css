@@ -433,6 +433,66 @@ body {
     font-size: 1.05rem;
 }
 
+/* Score Display */
+.score-display {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 16px;
+    color: white;
+}
+
+.score-display h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.score-big {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.score-display small {
+    opacity: 0.9;
+}
+
+/* Test Results */
+#testResults {
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+#testResults h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.result-item {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-item.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 4px solid var(--success);
+}
+
+.result-item.wrong {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid var(--danger);
+}
+
+.result-item small {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
 .home-btn {
     padding: 1rem 2rem;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
