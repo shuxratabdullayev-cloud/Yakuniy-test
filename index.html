@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yakuniy Imtixon - FAXR MADAD KONSALT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Bosh sahifa -->
+    <div id="homePage" class="page active">
+        <div class="header">
+            <h1>📚 FAXR MADAD KONSALT</h1>
+            <p class="subtitle">Buxgalteriya O'quv Markazi</p>
+        </div>
+
+        <div class="container">
+            <div class="exam-info">
+                <h2>📋 Yakuniy Imtixon</h2>
+                <div class="warning-box">
+                    <p>⚠️ <strong>Diqqat:</strong> Imtixonni faqat bir marta topshirish mumkin. 90 daqiqa vaqt beriladi.
+                        Vaqt tugagach avtomatik topshiriladi.</p>
+                </div>
+            </div>
+
+            <h3 class="section-title">Mavzuni tanlang</h3>
+            <div class="topics-grid" id="topicsGrid">
+                <!-- Mavzular JavaScript orqali yuklanadi -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Imtixon sahifasi -->
+    <div id="examPage" class="page">
+        <div class="exam-header">
+            <div class="exam-title" id="examTitle"></div>
+            <div class="timer" id="timer">⏱️ 90:00</div>
+        </div>
+
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <!-- I QISM: Test savollari -->
+            <div class="section" id="testSection">
+                <h2 class="section-header">I QISM. TEST SAVOLLARI</h2>
+                <p class="section-description">To'g'ri javobni belgilang</p>
+                <div id="testQuestions" class="questions-container"></div>
+            </div>
+
+            <!-- II QISM: Amaliy masalalar -->
+            <div class="section" id="practicalSection">
+                <h2 class="section-header">II QISM. AMALIY MASALALAR</h2>
+                <p class="section-description">Quyidagi vaziyatlar uchun aniq hisob-kitoblarni yozing</p>
+                <div id="practicalQuestions" class="questions-container"></div>
+            </div>
+
+            <!-- III QISM: Provodkalar -->
+            <div class="section" id="accountingSection">
+                <h2 class="section-header">III QISM. PROVODKALARNI YOZING</h2>
+                <p class="section-description">Buxgalteriya yozuvlarini to'ldiring</p>
+                <div id="accountingQuestions" class="questions-container"></div>
+            </div>
+
+            <button class="submit-btn" id="submitBtn">Imtixonni yakunlash</button>
+        </div>
+    </div>
+
+    <!-- Natija sahifasi -->
+    <div id="resultPage" class="page">
+        <div class="container">
+            <div class="result-card">
+                <h2>🎉 Imtixon yakunlandi!</h2>
+                <div class="result-info">
+                    <p><strong>Yakunlangan vaqt:</strong> <span id="completionTime"></span></p>
+                    <p><strong>Mavzu:</strong> <span id="resultTopic"></span></p>
+                </div>
+                <div class="result-message">
+                    <p>Javoblaringiz muvaffaqiyatli yuborildi. Natijalar tez orada e'lon qilinadi.</p>
+                </div>
+                <button class="home-btn" onclick="location.reload()">Bosh sahifaga qaytish</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student Info Modal -->
+    <div class="modal" id="studentModal">
+        <div class="modal-content">
+            <h2>👤 O'quvchi ma'lumotlari</h2>
+            <p class="modal-description">Imtixonni boshlashdan oldin ma'lumotlaringizni kiriting</p>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="studentName">F.I.O. (To'liq ism-familiya)</label>
+                    <input type="text" id="studentName" placeholder="Masalan: Aliyev Vali Akbarovich" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentGroup">Guruh</label>
+                    <input type="text" id="studentGroup" placeholder="Masalan: BX-101" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn-cancel" id="cancelBtn">Bekor qilish</button>
+                    <button type="submit" class="btn-start">Boshlash</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <button class="admin-btn" id="adminBtn">👤</button>
+    <div class="admin-panel" id="adminPanel">
+        <h3>📊 Admin Panel</h3>
+        <div id="adminContent">
+            <!-- Admin ma'lumotlari JavaScript orqali yuklanadi -->
+        </div>
+    </div>
+
+    <script src="app-bundled.js"></script>
+</body>
+
+</html>
