@@ -1378,7 +1378,9 @@ const Storage = {
                 studentGroup: exam.studentGroup || '',
                 completedAt: new Date(exam.completedAt).toLocaleString('uz-UZ'),
                 timeSpent: exam.timeSpent,
-                totalAnswers: Object.keys(exam.answers).length
+                totalAnswers: Object.values(exam.answers).reduce((total, section) => {
+                    return total + (typeof section === 'object' ? Object.keys(section).length : 0);
+                }, 0)
             }))
         };
     },
